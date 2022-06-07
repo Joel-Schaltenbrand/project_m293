@@ -1,0 +1,81 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+nav {
+  padding-top: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a, .dropbtn{
+float: left;
+color: #f2f2f2;
+text-align: center;
+padding: 10px 30px;
+text-decoration: none;
+font-size: 20px;
+border-radius: 60px;
+margin: 5px 5px 5px 5px;
+border: none;
+}
+
+nav a:hover,.dropdown-content a:hover {
+background-color: #242424;
+}
+
+nav a.active {
+font-weight: bold;
+background-color: #464646;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content,.dropdown-content1,.dropdown-content2 {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 70px;
+}
+.dropdown-content a {
+  float: none;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content1 a {
+  float: none;
+  text-decoration: none;
+  display: block;
+  width: 82%;
+}
+.dropdown-content2 a {
+  float: none;
+  text-decoration: none;
+  display: block;
+  width: 65%;
+}
+
+.dropdown:hover .dropdown-content,.dropdown:hover .dropdown-content1,.dropdown:hover .dropdown-content2 {
+  display: block;
+}
+
+i {
+  padding-left: 10px;
+  float: right;
+  color: white;
+  background: none;
+}
+.titel{
+  float: left;
+  padding-left: 50px;
+}
+h2 {
+  text-align: center;
+  font-size: 2em;
+}
