@@ -1,9 +1,11 @@
 * {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
+  color: white;
 }
 
 nav {
+  padding-top: 10px;
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
@@ -75,4 +77,10 @@ i {
   float: right;
   color: white;
   background: none;
+}
+.titel{
+  float: left;
+}
+h2 {
+  text-align: center;
 }
