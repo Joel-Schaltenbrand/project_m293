@@ -11,25 +11,27 @@ nav {
   justify-content: flex-end;
 }
 
-nav a, .dropbtn{
-float: left;
-color: #f2f2f2;
-text-align: center;
-padding: 10px 30px;
-text-decoration: none;
-font-size: 20px;
-border-radius: 60px;
-margin: 5px 5px 5px 5px;
-border: none;
+nav a,
+.dropbtn {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 25px;
+  border-radius: 60px;
+  margin: 5px 5px 5px 5px;
+  border: none;
 }
 
-nav a:hover,.dropdown-content a:hover {
-background-color: #242424;
+nav a:hover,
+.dropdown-content a:hover {
+  background-color: #242424;
 }
 
 nav a.active {
-font-weight: bold;
-background-color: #464646;
+  font-weight: bold;
+  background-color: #464646;
 }
 
 .dropdown {
@@ -37,7 +39,9 @@ background-color: #464646;
   overflow: hidden;
 }
 
-.dropdown-content,.dropdown-content1,.dropdown-content2 {
+.dropdown-content,
+.dropdown-content1,
+.dropdown-content2 {
   display: none;
   position: absolute;
   z-index: 1;
@@ -61,21 +65,89 @@ background-color: #464646;
   width: 65%;
 }
 
-.dropdown:hover .dropdown-content,.dropdown:hover .dropdown-content1,.dropdown:hover .dropdown-content2 {
+.dropdown:hover .dropdown-content,
+.dropdown:hover .dropdown-content1,
+.dropdown:hover .dropdown-content2 {
   display: block;
 }
 
-i {
+.fa fa-caret-down {
   padding-left: 10px;
   float: right;
   color: white;
   background: none;
 }
-.titel{
+.titel {
   float: left;
   padding-left: 50px;
 }
 h2 {
   text-align: center;
   font-size: 2em;
+}
+#logo {
+  padding-left: 10px;
+  padding-top: 30px;
+}
+article {
+  text-align: justify;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 100px;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+#text {
+  padding-bottom: 100px;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+iframe {
+  float: right;
+  width: auto;
+}
+article h3 {
+  text-align: end;
 }
