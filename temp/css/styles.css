@@ -14,7 +14,7 @@ nav {
 nav a,
 .dropbtn {
   float: left;
-  color: #f2f2f2;
+  color: white;
   text-align: center;
   padding: 10px 30px;
   text-decoration: none;
@@ -22,11 +22,14 @@ nav a,
   border-radius: 60px;
   margin: 5px 5px 5px 5px;
   border: none;
+  background: none;
 }
 
 nav a:hover,
 .dropdown-content a:hover {
-  background-color: #242424;
+  color: #00b4d8;
+  transition: 0.2s;
+  background-color: #464646;
 }
 
 nav a.active {
@@ -39,9 +42,7 @@ nav a.active {
   overflow: hidden;
 }
 
-.dropdown-content,
-.dropdown-content1,
-.dropdown-content2 {
+.dropdown-content {
   display: none;
   position: absolute;
   z-index: 1;
@@ -52,23 +53,10 @@ nav a.active {
   text-decoration: none;
   display: block;
 }
-.dropdown-content1 a {
-  float: none;
-  text-decoration: none;
-  display: block;
-  width: 82%;
-}
-.dropdown-content2 a {
-  float: none;
-  text-decoration: none;
-  display: block;
-  width: 65%;
-}
 
-.dropdown:hover .dropdown-content,
-.dropdown:hover .dropdown-content1,
-.dropdown:hover .dropdown-content2 {
+.dropdown:hover .dropdown-content {
   display: block;
+  background: none;
 }
 
 .fa fa-caret-down {
@@ -104,8 +92,6 @@ article {
   padding: 40px;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
-  border-radius: 10px;
 }
 
 .login-box .user-box {
@@ -120,8 +106,6 @@ article {
   margin-bottom: 30px;
   border: none;
   border-bottom: 1px solid #fff;
-  outline: none;
-  background: transparent;
 }
 #text {
   padding-bottom: 100px;
@@ -131,18 +115,28 @@ article {
   top: 0;
   left: 0;
   padding: 10px 0;
-  font-size: 16px;
   color: #fff;
   pointer-events: none;
-  transition: 0.5s;
+  transition: 0.8s;
 }
 
 .login-box .user-box input:focus ~ label,
 .login-box .user-box input:valid ~ label {
   top: -20px;
   left: 0;
-  color: #03e9f4;
+  color: #00b4d8;
   font-size: 12px;
+}
+.login-box input[type="submit"] {
+  font-size: 1.5em;
+  border: white solid 1px;
+  transition: 0.4s;
+}
+.login-box input[type="submit"]:hover {
+  font-size: 1.6em;
+  border: solid 3px;
+  background-color: #272727;
+  transition: 0.4s;
 }
 iframe {
   float: right;
