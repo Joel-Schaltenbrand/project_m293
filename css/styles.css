@@ -6,22 +6,47 @@ html {
   background-color: black;
 }
 body {
+  overflow-x: hidden;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 100px 1fr 100px;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 95% 5%;
   grid-template-areas:
-    none
     "header header"
     "main sidebar"
     "footer footer";
 }
+main {
+  grid-area: main;
+  padding-top: 50px;
+}
+#fw {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+#logobig {
+  grid-area: header;
+  float: left;
+}
+#logosmall {
+  grid-area: header;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 header {
+  grid-area: header;
 }
-nav {
+#desk,
+#mob {
+  grid-area: nav;
+  padding-top: 30px;
 }
-nav ul {
+#desk ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -29,33 +54,283 @@ nav ul {
   padding: 0px;
   margin: 0px;
 }
-nav li {
-  width: 130px;
+#desk li {
+  width: 150px;
   height: 50px;
   line-height: 50px;
   display: inline-block;
   text-align: center;
   border-radius: 50px;
 }
+#mob li {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+}
+.active {
+  background-color: rgb(77, 77, 77);
+  font-weight: bold;
+}
 
-nav a {
+#desk a,
+#mob a {
   text-decoration: none;
 }
 
-nav li:hover {
+#desk li:hover,
+#mob li:hover {
   background-color: rgb(100, 100, 100);
 }
 
-nav li ul {
+#desk li ul {
   position: absolute;
   display: none;
   width: inherit;
+  padding-top: 5px;
 }
 
-nav li:hover ul {
+#desk li:hover ul {
   display: block;
 }
 
-nav li ul li {
+#desk li ul li {
   display: block;
+}
+aside {
+  grid-area: sidebar;
+  text-align: end;
+  padding-top: 100px;
+}
+.fa {
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 50%;
+  border: 1px solid white;
+  margin-top: 10px;
+}
+.fa:hover {
+  background-color: rgb(100, 100, 100);
+}
+main h1 {
+  text-align: center;
+  font-size: 3em;
+  padding-top: 50px;
+}
+main h3 {
+  text-align: center;
+  padding-top: 10px;
+}
+footer.footer {
+  grid-area: footer;
+}
+
+p.copyright {
+  padding-top: 50px;
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+  bottom: 0;
+}
+
+.login-box {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+.login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background-color: black;
+}
+#text {
+  padding-bottom: 100px;
+}
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.8s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -10px;
+  left: 0;
+  color: #00b4d8;
+  font-size: 12px;
+}
+.login-box input[type="submit"] {
+  font-size: 1.5em;
+  border: white solid 1px;
+  transition: 0.4s;
+}
+.login-box input[type="submit"]:hover {
+  font-size: 1.6em;
+  border: solid 3px;
+  background-color: #272727;
+  transition: 0.4s;
+}
+#desk {
+  visibility: visible;
+}
+#mob {
+  visibility: collapse;
+}
+label .menu {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  z-index: 100;
+  width: 200px;
+  height: 200px;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 0 black, 0 0 0 0 black;
+  cursor: pointer;
+}
+
+label .hamburger {
+  position: absolute;
+  top: 135px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: white;
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+
+label .hamburger:before {
+  top: -10px;
+}
+
+label .hamburger:after {
+  bottom: -10px;
+}
+
+label input {
+  display: none;
+}
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw black, 0 0 0 100vh black;
+  border-radius: 0;
+}
+
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+}
+
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+}
+
+label input:checked + .menu + ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+label ul {
+  visibility: collapse;
+  z-index: 200;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: 0.25s 0s ease-in-out;
+  transition: 0.25s 0s ease-in-out;
+  width: 100%;
+}
+
+label a {
+  margin-bottom: 1em;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  #desk {
+    visibility: collapse;
+  }
+  body {
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 270px 1fr 100px 100px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+  aside {
+    grid-area: sidebar;
+    text-align: center;
+    padding-top: 10px;
+  }
+  .fa {
+    padding: 20px;
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-top: 10px;
+  }
+  #desk {
+    visibility: collapse;
+  }
+  #mob {
+    visibility: visible;
+  }
+  main {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
