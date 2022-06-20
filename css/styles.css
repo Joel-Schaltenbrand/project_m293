@@ -1,13 +1,17 @@
+/* ---------------------Start Grundgerüst ---------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
 * {
+  font-family: "Quicksand", sans-serif;
   color: white;
   box-sizing: border-box;
+  font-size: 25px;
 }
 html {
   background-color: black;
 }
 body {
-  overflow-x: hidden;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 100px 1fr 100px;
@@ -17,10 +21,27 @@ body {
     "main sidebar"
     "footer footer";
 }
+/* ---------------------Ende Grundgerüst ---------------------*/
+
+/* ---------------------Start Zuweisungen ---------------------*/
+header {
+  grid-area: header;
+}
 main {
   grid-area: main;
   padding-top: 50px;
 }
+footer {
+  grid-area: footer;
+}
+aside {
+  grid-area: sidebar;
+  text-align: end;
+  padding-top: 100px;
+}
+/* ---------------------Ende Zuweisungen ---------------------*/
+
+/* ---------------------Start Bilder ---------------------*/
 #fw {
   display: block;
   margin-left: auto;
@@ -28,131 +49,80 @@ main {
   width: 80%;
 }
 #logobig {
-  grid-area: header;
   float: left;
+  width: 25%;
 }
 #logosmall {
-  grid-area: header;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 70%;
 }
-header {
-  grid-area: header;
-}
-#desk,
-#mob {
-  grid-area: nav;
-  padding-top: 30px;
-}
-#desk ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-end;
-  padding: 0px;
-  margin: 0px;
-}
-#desk li {
-  width: 150px;
-  height: 50px;
-  line-height: 50px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50px;
-}
-#mob li {
+#me {
   width: 100%;
-  height: 50px;
-  line-height: 50px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50px;
 }
-.active {
-  background-color: rgb(77, 77, 77);
-  font-weight: bold;
-}
+/* ---------------------Ende Bilder ---------------------*/
 
-#desk a,
-#mob a {
+/* ---------------------Start Symbole ---------------------*/
+aside .fa {
+  padding: 30px;
   text-decoration: none;
-}
-
-#desk li:hover,
-#mob li:hover {
-  background-color: rgb(100, 100, 100);
-}
-
-#desk li ul {
-  position: absolute;
-  display: none;
-  width: inherit;
-  padding-top: 5px;
-}
-
-#desk li:hover ul {
-  display: block;
-}
-
-#desk li ul li {
-  display: block;
-}
-aside {
-  grid-area: sidebar;
-  text-align: end;
-  padding-top: 100px;
-}
-.fa {
-  padding: 20px;
-  text-decoration: none;
-  border-radius: 50%;
+  border-radius: 100%;
   border: 1px solid white;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 1.5em;
 }
-.fa:hover {
+aside .fa:hover {
   background-color: rgb(100, 100, 100);
 }
+/* ---------------------Ende Symbole ---------------------*/
+
+/* ---------------------Start Texte ---------------------*/
 main h1 {
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   padding-top: 50px;
 }
 main h3 {
   text-align: center;
   padding-top: 10px;
+  font-size: 1.2em;
 }
-footer.footer {
-  grid-area: footer;
+footer {
+  position: relative;
+  height: 200px;
+  width: 100%;
 }
 
 p.copyright {
-  padding-top: 50px;
+  position: absolute;
+  width: 100%;
   color: #fff;
-  font-size: 0.8em;
+  font-size: 1em;
   text-align: center;
   bottom: 0;
 }
+/* ---------------------Ende Texte ---------------------*/
 
+/* ---------------------Start Kontaktmenü ---------------------*/
+.login-box h2 {
+  font-size: 2em;
+}
 .login-box {
   position: relative;
   top: 50%;
   left: 50%;
-  width: 400px;
-  padding: 40px;
+  width: 100%;
+  padding: 100px;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
 }
-
 .login-box .user-box {
   position: relative;
 }
-
 .login-box .user-box input {
   width: 100%;
   padding: 15px 0;
-  font-size: 16px;
   color: #fff;
   margin-bottom: 30px;
   border: none;
@@ -171,7 +141,6 @@ p.copyright {
   pointer-events: none;
   transition: 0.8s;
 }
-
 .login-box .user-box input:focus ~ label,
 .login-box .user-box input:valid ~ label {
   top: -10px;
@@ -190,21 +159,75 @@ p.copyright {
   background-color: #272727;
   transition: 0.4s;
 }
+/* ---------------------Ende Kontaktmenü ---------------------*/
+
+/* ---------------------Start Navigationsbar DESKTOP ---------------------*/
 #desk {
   visibility: visible;
 }
+#desk ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  padding: 0px;
+  margin: 0px;
+}
+#desk li {
+  font-weight: 500;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+#desk li ul {
+  position: absolute;
+  display: none;
+  width: inherit;
+  padding-top: 5px;
+}
+#desk li:hover ul {
+  display: block;
+}
+#desk li ul li {
+  display: block;
+}
+/* ---------------------Ende Navigationsbar DESKTOP ---------------------*/
+
+/* ---------------------Start Navigationsbar MOBILE/DESKTOP ---------------------*/
+#desk,
+#mob {
+  grid-area: nav;
+  padding-top: 40px;
+}
+#desk a,
+#mob a {
+  text-decoration: none;
+}
+
+#desk li:hover,
+#mob li:hover {
+  background-color: rgb(100, 100, 100);
+}
+/* ---------------------Ende Navigationsbar MOBILE/DESKTOP ---------------------*/
+.active {
+  background-color: rgb(77, 77, 77);
+}
+
+/* ---------------------Start Navigationsbar MOBILE ---------------------*/
 #mob {
   visibility: collapse;
 }
 label .menu {
   position: absolute;
-  right: -100px;
+  right: 0px;
   top: -100px;
   z-index: 100;
-  width: 200px;
+  width: 100px;
   height: 200px;
-  border-radius: 50% 50% 50% 50%;
-  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   box-shadow: 0 0 0 0 black, 0 0 0 0 black;
   cursor: pointer;
@@ -212,21 +235,17 @@ label .menu {
 
 label .hamburger {
   position: absolute;
-  top: 135px;
-  left: 50px;
-  width: 30px;
-  height: 2px;
+  top: 155px;
+  width: 40px;
+  height: 3px;
   background: white;
   display: block;
-  -webkit-transform-origin: center;
   transform-origin: center;
-  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
 }
 
 label .hamburger:after,
 label .hamburger:before {
-  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   content: "";
   position: absolute;
@@ -254,18 +273,15 @@ label input:checked + .menu {
 }
 
 label input:checked + .menu .hamburger {
-  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 
 label input:checked + .menu .hamburger:after {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   bottom: 0;
 }
 
 label input:checked + .menu .hamburger:before {
-  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
   top: 0;
 }
@@ -281,10 +297,8 @@ label ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   opacity: 0;
-  -webkit-transition: 0.25s 0s ease-in-out;
   transition: 0.25s 0s ease-in-out;
   width: 100%;
 }
@@ -294,12 +308,21 @@ label a {
   display: block;
   color: white;
   text-decoration: none;
+  font-size: 1.5em;
 }
+#mob li {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50px;
+  padding-top: 40px;
+  margin-top: 20px;
+}
+/* ---------------------Ende Navigationsbar MOBILE ---------------------*/
 
+/* ---------------------Start MOBILE ---------------------*/
 @media screen and (max-width: 1200px) {
-  #desk {
-    visibility: collapse;
-  }
+  /* ---------------------Start Grundgerüst ---------------------*/
   body {
     margin: 0 auto;
     display: grid;
@@ -311,26 +334,69 @@ label a {
       "sidebar"
       "footer";
   }
-  aside {
-    grid-area: sidebar;
-    text-align: center;
-    padding-top: 10px;
-  }
-  .fa {
-    padding: 20px;
-    text-decoration: none;
-    border-radius: 50%;
-    border: 1px solid white;
-    margin-top: 10px;
-  }
   #desk {
     visibility: collapse;
   }
   #mob {
     visibility: visible;
   }
+  /* ---------------------Ende Grundgerüst ---------------------*/
+
+  /* ---------------------Start Symbole ---------------------*/
+  aside {
+    text-align: center;
+    padding-top: 50px;
+  }
+  aside .fa {
+    text-decoration: none;
+    border-radius: 50%;
+    border: 1px solid white;
+    font-size: 50px;
+  }
+  /* ---------------------Ende Symbole ---------------------*/
+
+  /* ---------------------Start Texte ---------------------*/
   main {
     padding-left: 50px;
     padding-right: 50px;
   }
+  main h1 {
+    font-size: 4em;
+  }
+  main h2 {
+    font-size: 2em;
+  }
+  main h3 {
+    font-size: 1.5em;
+  }
+
+  /* ---------------------Ende Texte ---------------------*/
+
+  /* ---------------------Start Kontaktmenü ---------------------*/
+  .login-box .user-box input {
+    padding: 50px 0;
+    font-size: 40px;
+  }
+  #text {
+    padding-bottom: 100px;
+  }
+  .login-box .user-box label {
+    top: 40px;
+    font-size: 40px;
+  }
+
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label {
+    top: -10px;
+    font-size: 30px;
+  }
+  .login-box input[type="submit"] {
+    font-size: 2em;
+  }
+  .login-box input[type="submit"]:hover {
+    font-size: 2.2em;
+  }
+  /* ---------------------Ende Kontaktmenü ---------------------*/
+
+  /* ---------------------End MOBILE ---------------------*/
 }
