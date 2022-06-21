@@ -29,7 +29,7 @@ header {
 }
 main {
   grid-area: main;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 footer {
   grid-area: footer;
@@ -43,10 +43,8 @@ aside {
 
 /* ---------------------Start Bilder ---------------------*/
 #fw {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+  float: left;
+  width: 45%;
 }
 #logobig {
   float: left;
@@ -61,9 +59,38 @@ aside {
 #me {
   width: 100%;
 }
+#promo,
+#promogif {
+  height: 400px;
+}
+#apps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#get {
+  width: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 70%;
+}
+
 /* ---------------------Ende Bilder ---------------------*/
 
 /* ---------------------Start Symbole ---------------------*/
+aside .fa:first-child {
+  margin-top: 100px;
+}
 aside .fa {
   padding: 30px;
   text-decoration: none;
@@ -88,12 +115,20 @@ main h3 {
   padding-top: 10px;
   font-size: 1.2em;
 }
+main h4 {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1em;
+  font-weight: 100;
+  margin-right: 70px;
+  margin-left: 70px;
+}
 footer {
   position: relative;
   height: 200px;
   width: 100%;
+  text-align: center;
 }
-
 p.copyright {
   position: absolute;
   width: 100%;
@@ -102,13 +137,38 @@ p.copyright {
   text-align: center;
   bottom: 0;
 }
+hr {
+  width: 50%;
+}
+#findme {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+#trademark {
+  margin: 0;
+  padding: 0;
+}
+table {
+  margin: 0 auto;
+  width: 100%;
+}
+td h4{
+  margin: 10px 80px 100px 80px;
+}
+main a {
+  text-decoration: none;
+  color: #00b4d8;
+}
+
 /* ---------------------Ende Texte ---------------------*/
 
 /* ---------------------Start Kontaktmenü ---------------------*/
-.login-box h2 {
+.kontakt-box h2 {
   font-size: 2em;
 }
-.login-box {
+.kontakt-box {
   position: relative;
   top: 50%;
   left: 50%;
@@ -117,10 +177,10 @@ p.copyright {
   transform: translate(-50%, -50%);
   box-sizing: border-box;
 }
-.login-box .user-box {
+.kontakt-box .user-box {
   position: relative;
 }
-.login-box .user-box input {
+.kontakt-box .user-box input {
   width: 100%;
   padding: 15px 0;
   color: #fff;
@@ -132,7 +192,7 @@ p.copyright {
 #text {
   padding-bottom: 100px;
 }
-.login-box .user-box label {
+.kontakt-box .user-box label {
   position: absolute;
   top: 0;
   left: 0;
@@ -141,19 +201,19 @@ p.copyright {
   pointer-events: none;
   transition: 0.8s;
 }
-.login-box .user-box input:focus ~ label,
-.login-box .user-box input:valid ~ label {
+.kontakt-box .user-box input:focus ~ label,
+.kontakt-box .user-box input:valid ~ label {
   top: -10px;
   left: 0;
   color: #00b4d8;
-  font-size: 12px;
+  font-size: 15px;
 }
-.login-box input[type="submit"] {
+.kontakt-box input[type="submit"] {
   font-size: 1.5em;
   border: white solid 1px;
   transition: 0.4s;
 }
-.login-box input[type="submit"]:hover {
+.kontakt-box input[type="submit"]:hover {
   font-size: 1.6em;
   border: solid 3px;
   background-color: #272727;
@@ -182,6 +242,7 @@ p.copyright {
   text-align: center;
   border-radius: 50px;
   margin-right: 10px;
+  margin-top: 10px;
 }
 #desk li ul {
   position: absolute;
@@ -212,10 +273,10 @@ p.copyright {
 #mob li:hover {
   background-color: rgb(100, 100, 100);
 }
-/* ---------------------Ende Navigationsbar MOBILE/DESKTOP ---------------------*/
 .active {
   background-color: rgb(77, 77, 77);
 }
+/* ---------------------Ende Navigationsbar MOBILE/DESKTOP ---------------------*/
 
 /* ---------------------Start Navigationsbar MOBILE ---------------------*/
 #mob {
@@ -320,6 +381,99 @@ label a {
 }
 /* ---------------------Ende Navigationsbar MOBILE ---------------------*/
 
+/* ---------------------Start Zeitlinie ---------------------*/
+.timeline {
+  position: relative;
+  margin: 0 auto;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #0066fff8;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+.left {
+  left: 0;
+}
+.right {
+  left: 50%;
+}
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+.right::after {
+  left: -16px;
+}
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 10px;
+  color: black;
+}
+.content h2,
+.content p {
+  color: black;
+  font-size: 0.8em;
+}
+.content h2,
+.content p {
+  color: black;
+  font-size: 0.8em;
+}
+.content h3 {
+  color: black;
+  font-size: 1em;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+/* ---------------------Ende Zeitlinie ---------------------*/
+
 /* ---------------------Start MOBILE ---------------------*/
 @media screen and (max-width: 1200px) {
   /* ---------------------Start Grundgerüst ---------------------*/
@@ -342,6 +496,26 @@ label a {
   }
   /* ---------------------Ende Grundgerüst ---------------------*/
 
+  /* ---------------------Start Bilder ---------------------*/
+  #promo,
+  #promogif,
+  #get {
+    width: 60%;
+  }
+  video {
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 100%;
+  }
+  #fw {
+    float: unset;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  /* ---------------------Ende Bilder ---------------------*/
+
   /* ---------------------Start Symbole ---------------------*/
   aside {
     text-align: center;
@@ -352,6 +526,9 @@ label a {
     border-radius: 50%;
     border: 1px solid white;
     font-size: 50px;
+  }
+  aside .fa:first-child {
+    margin-top: 0;
   }
   /* ---------------------Ende Symbole ---------------------*/
 
@@ -373,27 +550,27 @@ label a {
   /* ---------------------Ende Texte ---------------------*/
 
   /* ---------------------Start Kontaktmenü ---------------------*/
-  .login-box .user-box input {
+  .kontakt-box .user-box input {
     padding: 50px 0;
     font-size: 40px;
   }
   #text {
     padding-bottom: 100px;
   }
-  .login-box .user-box label {
+  .kontakt-box .user-box label {
     top: 40px;
     font-size: 40px;
   }
 
-  .login-box .user-box input:focus ~ label,
-  .login-box .user-box input:valid ~ label {
+  .kontakt-box .user-box input:focus ~ label,
+  .kontakt-box .user-box input:valid ~ label {
     top: -10px;
     font-size: 30px;
   }
-  .login-box input[type="submit"] {
+  .kontakt-box input[type="submit"] {
     font-size: 2em;
   }
-  .login-box input[type="submit"]:hover {
+  .kontakt-box input[type="submit"]:hover {
     font-size: 2.2em;
   }
   /* ---------------------Ende Kontaktmenü ---------------------*/
