@@ -45,10 +45,9 @@ aside {
 #fw {
   width: 45%;
   margin-bottom: 20px;
-      display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #logobig {
   float: left;
@@ -355,12 +354,12 @@ label input:checked + .menu .hamburger:before {
   top: 0;
 }
 
-label input:checked + .menu + ul {
+label input:checked + .menu + ul #mob-menu {
   opacity: 1;
   visibility: visible;
 }
 
-label ul {
+#mob ul {
   visibility: collapse;
   z-index: 200;
   position: absolute;
@@ -372,7 +371,7 @@ label ul {
   width: 100%;
 }
 
-label a {
+#mob a {
   margin-bottom: 1em;
   display: block;
   color: white;

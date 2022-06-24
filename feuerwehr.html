@@ -1,120 +1,104 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="description" content="Hier aufgezeigt werden die Erfahrungen in der Feuerwehr."/>
-    <title>Joel Schaltenbrand - Feuerwehr</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
 
-  <body>
-    <header>
-      <nav id="desk">
-        <a href="index.html">
-          <img src="images/logo-big.svg" alt="Logo" width="200" id="logobig"
-        /></a>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="active">
-            Hobbys
-            <i class="fa fa-caret-down"></i>
-            <ul>
-              <li class="active"><a href="feuerwehr.html">Feuerwehr</a></li>
-              <li><a href="informatik.html">Informatik</a></li>
-            </ul>
-          </li>
-          <li>
-            Bildung
-            <i class="fa fa-caret-down"></i>
-            <ul>
-              <li><a href="laufbahn.html">Laufbahn</a></li>
-              <li><a href="ausbildung.html">Ausbildungen</a></li>
-            </ul>
-          </li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-          <li>
-            Rechtliches
-            <i class="fa fa-caret-down"></i>
-            <ul>
-              <li><a href="datenschutz.html">Datenschutz</a></li>
-              <li><a href="impressum.html">Impressum</a></li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <meta name="description" content="Hier aufgezeigt werden die Erfahrungen in der Feuerwehr." />
+  <title>Joel Schaltenbrand - Feuerwehr</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
 
-      <nav id="mob">
-        <a href="index.html">
-          <img src="images/logo-big.svg" alt="Logo" id="logosmall"
-        /></a>
-        <label>
-          <input type="checkbox" />
-          <span class="menu"> <span class="hamburger"></span> </span>
+<body>
+  <header>
+    <nav id="desk">
+      <a href="index.html">
+        <img src="images/logo-big.svg" alt="Logo" width="200" id="logobig" /></a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active">
+          Hobbys
+          <i class="fa fa-caret-down"></i>
           <ul>
-            <li><a href="index.html">Home</a></li>
             <li class="active"><a href="feuerwehr.html">Feuerwehr</a></li>
             <li><a href="informatik.html">Informatik</a></li>
+          </ul>
+        </li>
+        <li>
+          Bildung
+          <i class="fa fa-caret-down"></i>
+          <ul>
             <li><a href="laufbahn.html">Laufbahn</a></li>
             <li><a href="ausbildung.html">Ausbildungen</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li>
+          Rechtliches
+          <i class="fa fa-caret-down"></i>
+          <ul>
             <li><a href="datenschutz.html">Datenschutz</a></li>
             <li><a href="impressum.html">Impressum</a></li>
           </ul>
-        </label>
-      </nav>
-    </header>
-    <main>
-      <h1>Feuerwehr</h1>
-      <img src="images/feuerwehr.jpg" alt="Ich" id="fw" />
-      <h4>
-        
-        Seit Januar 2021 bin ich bei der
-        <a href="https://fwlaufental.ch" target="_blank"
-          >Stützpunktfeuerwehr Laufental.</a
-        >
-        <br /><br />
-        Ich habe das erste Jahr als Rekrut absolviert. In diesem Jahr habe ich
-        verschiedene Übungen mit anderen Rekruten gemeistert. Wir wurden
-        speziell geschult und für die Einteilung vorbereitet.
-        <br /><br />
-        Seit Anfang 2022 bin ich nun in meiner eigenen Alarmgruppe, welche ca.
-        jede vierte Woche Pikett hat. Zudem haben wir jeweils mit unserer
-        Paralelgruppe (Welche auch aufgerufen wird wenn noch mehr AdF benötigt
-        werden) fast jede zweite Woche eine Übung.
-      </h4>
-      <br />
-      <hr />
-      <h3>Vorstellungsvideo</h3>
-      <video src="/images/video.mp4" controls></video>
-    </main>
-    <aside>
-      <a
-        href="https://www.linkedin.com/in/joel-schaltenbrand/"
-        target="_blank"
-        class="fa fa-linkedin"
-      ></a>
-      <a
-        href="https://twitter.com/SchaltenbrandL"
-        target="_blank"
-        class="fa fa-twitter"
-      ></a>
-      <a
-        href="https://instagram.com/__joel02__"
-        target="_blank"
-        class="fa fa-instagram"
-      ></a>
-    </aside>
-    <footer>
-      <p class="copyright">
-        ©2022 Joel Schaltenbrand, All Rights Reserved <br>
-        <a href="/datenschutz.html">Datenschutzerklärung</a> |
-        <a href="/impressum.html">Impressum</a>
-      </p>
-    </footer>
-  </body>
+        </li>
+      </ul>
+    </nav>
+
+    <nav id="mob">
+      <a href="index.html">
+        <img src="images/logo-big.svg" alt="Logo" id="logosmall" /></a>
+      <label>
+        <input type="checkbox" onclick="toggle()" id="tgbtn" />
+        <span class="menu"> <span class="hamburger"></span> </span>
+      </label>
+      <ul id="list">
+        <li class="active"><a href="index.html">Home</a></li>
+        <li><a href="feuerwehr.html">Feuerwehr</a></li>
+        <li><a href="informatik.html">Informatik</a></li>
+        <li><a href="laufbahn.html">Laufbahn</a></li>
+        <li><a href="ausbildung.html">Ausbildungen</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Feuerwehr</h1>
+    <img src="images/feuerwehr.jpg" alt="Ich" id="fw" />
+    <h4>
+
+      Seit Januar 2021 bin ich bei der
+      <a href="https://fwlaufental.ch" target="_blank">Stützpunktfeuerwehr Laufental.</a>
+      <br /><br />
+      Ich habe das erste Jahr als Rekrut absolviert. In diesem Jahr habe ich
+      verschiedene Übungen mit anderen Rekruten gemeistert. Wir wurden
+      speziell geschult und für die Einteilung vorbereitet.
+      <br /><br />
+      Seit Anfang 2022 bin ich nun in meiner eigenen Alarmgruppe, welche ca.
+      jede vierte Woche Pikett hat. Zudem haben wir jeweils mit unserer
+      Paralelgruppe (Welche auch aufgerufen wird wenn noch mehr AdF benötigt
+      werden) fast jede zweite Woche eine Übung.
+    </h4>
+    <br />
+    <hr />
+    <h3>Vorstellungsvideo</h3>
+    <video src="/images/video.mp4" controls></video>
+  </main>
+  <aside>
+    <a href="https://www.linkedin.com/in/joel-schaltenbrand/" target="_blank" class="fa fa-linkedin"></a>
+    <a href="https://twitter.com/SchaltenbrandL" target="_blank" class="fa fa-twitter"></a>
+    <a href="https://instagram.com/__joel02__" target="_blank" class="fa fa-instagram"></a>
+  </aside>
+  <footer>
+    <p class="copyright">
+      ©2022 Joel Schaltenbrand, All Rights Reserved <br>
+      <a href="/datenschutz.html">Datenschutzerklärung</a> |
+      <a href="/impressum.html">Impressum</a>
+    </p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
 </html>
