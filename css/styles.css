@@ -5,7 +5,7 @@
   font-family: "Quicksand", sans-serif;
   color: white;
   box-sizing: border-box;
-  font-size: 25px;
+  font-size: 17px;
 }
 html {
   background-color: black;
@@ -87,6 +87,15 @@ video {
   padding-left: 40px;
   padding-right: 40px;
   width: 70%;
+}
+#toleon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 0.5em;
+  margin: 0;
+  padding: 0;
 }
 
 /* ---------------------Ende Bilder ---------------------*/
@@ -385,6 +394,7 @@ label input:checked + .menu + ul #mob-menu {
   border-radius: 50px;
   padding-top: 40px;
   margin-top: 20px;
+  font-size: 1.6em;
 }
 /* ---------------------Ende Navigationsbar MOBILE ---------------------*/
 
